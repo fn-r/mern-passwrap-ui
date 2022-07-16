@@ -18,7 +18,7 @@ function App() {
     const PublicRoute = ({ children }) => user ? <Navigate to="/" /> : children
 
     return (
-        <BrowserRouter>
+        <BrowserRouter forceResfresh={true}>
             <Routes>
                 {/* Private access */}
                 <Route path="/" element={<PrivateRoute><Home /></PrivateRoute>} />

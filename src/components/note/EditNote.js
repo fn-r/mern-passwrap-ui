@@ -14,7 +14,7 @@ const EditNote = ({ user, setData, editNote, setEditNote }) => {
             notes: editNote.notes,
         })
         setData(editNote)
-        setEditNote(null)
+        setEditNote(editNote)
     };
 
     return (

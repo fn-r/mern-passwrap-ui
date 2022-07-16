@@ -13,7 +13,7 @@ const Background = ( { children } ) =>
     });
     
     return (
-        <div className="bg-body dark:bg-gray-900 w-full h-full transition duration-500">
+        <div className="bg-body dark:bg-gray-900 w-screen h-screen transition duration-500">
             {children}
         </div>
     )

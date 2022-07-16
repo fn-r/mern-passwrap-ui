@@ -2,8 +2,13 @@ import axios from "axios";
 import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
+import { ThemeContext } from '../context/ThemeContext';
+
+import logo from '../img/logo.svg'
+import logoDark from '../img/logo-dark.svg'
 
 const Login = () => {
+    const { colorTheme } = useContext(ThemeContext);
     const [credentials, setCredentials] = useState({
         "username": "demo_user",
         "password": "XQYgVcmOlyIXcQ"
@@ -36,10 +41,10 @@ const Login = () => {
             <div className="container px-4 mx-auto">
                 <div className="max-w-sm mx-auto">
                     <div className="mb-6 text-center">
-                        <Link to="#" className="inline-block mb-6">
-                            <img className="h-16" src="flex-ui-assets/logos/flex-circle-blue.svg" alt="" />
+                        <Link to="/login" className="inline-block mb-6">
+                            <img className="h-16" src={(colorTheme === 'dark') ? logoDark : logo} alt="logo" />
                         </Link>
-                        <h3 className="mb-4 text-2xl md:text-3xl dark:text-white font-bold">Sign in to Passwrap</h3>
+                        <h3 className="mb-4 text-2xl md:text-3xl dark:text-white font-bold">Sign in</h3>
                         <p className="text-lg text-coolGray-500 dark:text-lightGray-500 font-medium">Start your demo version</p>
                     </div>
                     <form action="">
