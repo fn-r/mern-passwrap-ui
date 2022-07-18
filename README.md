@@ -1,70 +1,56 @@
-# Getting Started with Create React App
+# Passwrap (Full Stack Web App): <a target="_blank" href="https://passwrap-ui.netlify.app/">Visit Here</a>
+<p align="center">
+  • 
+  <a href="#about">About</a> •
+  <a href="#technology-stack">Technology Stack</a> •
+  <a href="#optimizations">Optimizations</a> •
+  <a href="#lesson-learned">Lesson Learned</a> •
+  <a href="#setup">Setup</a> •
+  <a href="#build-and-deploy">Build and Deploy</a> •
+  <a href="#additional-notes">Additional Notes</a> •
+</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## About
+This is the frontend of the web app version of a previous project I did of [Passwrap](https://passwrap.netlify.app/). From a password generator to a password manager built with the MERN stack, it helps you to stay organized and securely store your passwords and notes.
 
-## Available Scripts
+The backend of this web app can be found in the repo, https://github.com/fn-r/mern-passwrap-api
 
-In the project directory, you can run:
+<a target="_blank" href="https://passwrap-ui.netlify.app/">
+    <img src="https://github.com/fn-r/portfolio/blob/main/images/projects/mern-passwrap.jpg" width="100%" alt="MERN Passwrap"/>
+</a>
 
-### `npm start`
+## Technology Stack
+![REACT BADGE](https://custom-icon-badges.herokuapp.com/badge/-react-A5FFCE?style=for-the-badge&logo=react&logoColor=A5FFCE&labelColor=000000)
+![TAILWIND BADGE](https://custom-icon-badges.herokuapp.com/badge/-tailwind-A5FFCE?style=for-the-badge&logo=tailwindcss&logoColor=A5FFCE&labelColor=000000)
+![HTML5 BADGE](https://custom-icon-badges.herokuapp.com/badge/-html5-A5FFCE?style=for-the-badge&logo=html5&logoColor=A5FFCE&labelColor=000000)
+![CSS3 BADGE](https://custom-icon-badges.herokuapp.com/badge/-css3-A5FFCE?style=for-the-badge&logo=css3&logoColor=A5FFCE&labelColor=000000) 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Optimizations
+I would further improve this project by implementing a skeleton design for handling loading of data.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Lesson Learned
+Cookies:
+    The access token is stored in cookies so that only authorized user is allowed access to certain pages.
 
-### `npm test`
+## Setup
+1. Edit `REACT_APP_API` value
+    ```
+    REACT_APP_API="Your API"
+    ```
+1. Install dependencies (FRONTEND)
+    ```bash
+    npm install pkg.json --save
+    ```
+1. Run (FRONTEND)
+    ```
+    npm run start
+    ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Build and Deploy
+1. Run the following command to create a production build of the frontend
+    ```
+    npm run prod:build
+    ```
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Additional Notes
+It is a common practice to not push `.env` file to your repo. The data stored in this repo is not considered private and therefore, were made public.
