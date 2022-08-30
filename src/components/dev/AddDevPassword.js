@@ -41,7 +41,7 @@ const AddDevPassword = ({ user, addMenu, setData, toggleAddMenu }) => {
             }
             return value
         }).reduce((a, b) => a + b)
-        const rand = await axios.get(`https://random.justyy.workers.dev/api/random/?n=${rangeValue}&x=${x}`, { withCredentials: false })
+        const rand = await axios.get(`https://randomstr.justyy.workers.dev/api/random/?cached&n=${rangeValue}&x=${x}&hash=e3fc616bc43cc4d3540569bce2e1ffcc&_=1661820987422`, { withCredentials: false, })
         setNewPassword((prev) => ({ ...prev, password: rand.data }));
     }
 

@@ -41,6 +41,7 @@ const Webs = () => {
     const handleDelete = async (data) => {
         setData(data)
         await axios.delete(`${process.env.REACT_APP_API}/webs/${data._id}/${user._id}`)
+        setData(null)
     }
 
     // Toggle add and edit password menu

@@ -9,6 +9,7 @@ import Notes from "./pages/Notes";
 import Webs from "./pages/Webs";
 import Devs from "./pages/Devs";
 import Login from "./pages/Login";
+import Refresh from "./pages/Refresh";
 
 axios.defaults.withCredentials = true
 
@@ -18,7 +19,7 @@ function App() {
     const PublicRoute = ({ children }) => user ? <Navigate to="/" /> : children
 
     return (
-        <BrowserRouter forceResfresh={true}>
+        <BrowserRouter forceResfresh>
             <Routes>
                 {/* Private access */}
                 <Route path="/" element={<PrivateRoute><Home /></PrivateRoute>} />
@@ -28,6 +29,7 @@ function App() {
                 <Route path="devs" element={<PrivateRoute><Devs /></PrivateRoute>} />
                 {/* Public access */}
                 <Route path="login" element={<PublicRoute><Login /></PublicRoute>} />
+                <Route path="*" element={<Refresh />} />
             </Routes>
         </BrowserRouter>
     );
